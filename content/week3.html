@@ -134,6 +134,64 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">week2 << <a href='week2.html'>Previous</a> <a href='week4.html'>Next</a> >> week4<br /><h1>week3</h1>
+<p>利用<span>CoppeliaSim進行模擬</span></p>
+<h4><span>模擬步驟</span></h4>
+<p><span>1.開啟想要模擬的檔案</span></p>
+<p>File&gt;Import&gt;Mesh</p>
+<p><img alt="" height="314" src="./../images/coppeliaSim_LhHMRc1ibw.png" width="558"/></p>
+<p><img alt="" height="314" src="./../images/1.png" width="560"/></p>
+<p><img alt="" height="469" src="./../images/2.png" width="418"/></p>
+<p>2.移動到想要的位置</p>
+<p>Object/item shift</p>
+<p><img alt="" height="314" src="./../images/coppeliaSim_EzU8d9ZvMt.png" width="560"/></p>
+<p>將移動方向設為Z軸</p>
+<p><img alt="" height="244" src="./../images/3.png" width="474"/></p>
+<p>將組合件拉至不會跟地板干涉</p>
+<p><img alt="" height="560" src="./../images/4.png" width="500"/></p>
+<p>3.將組合件拆成多個零件</p>
+<p>對組合件按右鍵 Edit&gt;Grouping/Merging&gt;Divide selected shape</p>
+<p><img alt="" height="314" src="./../images/coppeliaSim_tLMxLBa2fN.png" width="560"/></p>
+<p>4.將兩個踏板合成一個零件</p>
+<p><span>按住shift點選兩個踏板&gt;按右鍵 Edit&gt;Grouping/Merging&gt;Merge selected shape</span></p>
+<p><img alt="" height="314" src="./../images/coppeliaSim_Z6GLuV75TO.png" width="560"/></p>
+<p>5.新增旋轉軸</p>
+<p>在空白處點選右鍵&gt;Add&gt;Joint&gt;Revolute</p>
+<p><img alt="" height="616" src="./../images/5.png" width="594"/></p>
+<p>6.將旋轉軸定位並給予轉速</p>
+<p><span>按住shift點選前輪和旋轉軸&gt;</span><span>點選Object/item Translation&gt;Position&gt;Apply to selection</span></p>
+<p><span><img alt="" height="314" src="./../images/uJpUPk41o5.png" width="560"/></span></p>
+<p><span><img alt="" height="314" src="./../images/ERVT4YAL77.png" width="560"/></span></p>
+<p><span>點選旋轉軸&gt;Object/item Rotation/Orientation&gt;Rotation&gt;Own frame&gt;在X軸輸入90&gt;Rotate selection</span></p>
+<p><span><img alt="" height="314" src="./../images/RRfE5zvkrG.png" width="560"/></span></p>
+<p><span>點兩下旋轉軸名稱前的圖示&gt;Show dynamic properties dialog</span></p>
+<p><span>如果旋轉軸太小的話，可以修改Length(長度)跟Diameter(直徑)</span></p>
+<p><span><img alt="" height="684" src="./../images/6.png" width="563"/></span></p>
+<p><span>將Motor properties和Lock motor when target velocity is zero打勾，並賦予速度</span></p>
+<p><span><img alt="" height="633" src="./../images/7.png" width="579"/></span></p>
+<p><span>7.幫後輪跟踏板加上旋轉軸</span></p>
+<p><span>將旋轉軸複製兩根，並分配給後輪跟踏板</span></p>
+<p><span><img alt="" height="314" src="./../images/coppeliaSim_RugIJRAHCy.png" width="560"/></span></p>
+<p><span>按住shift點選後輪和第二根旋轉軸&gt;</span><span>點選Object/item Translation&gt;Position&gt;Apply to selection</span></p>
+<p><span><img alt="" height="314" src="./../images/10TicPW3MF.png" width="560"/></span></p>
+<p><span>按住shift點選踏板和第三根旋轉軸&gt;<span>點選Object/item Translation&gt;Position&gt;Apply to selection</span></span></p>
+<p><span><span><img alt="" height="314" src="./../images/yrFFijE4yZ.png" width="560"/></span></span></p>
+<p><span><span>8.零件組合</span></span></p>
+<p><span><span>將前輪、後輪、踏板家道各自的旋轉軸分支下</span></span></p>
+<p><span><span><img alt="" height="314" src="./../images/coppeliaSim_Z24Exw7Goz.png" width="560"/></span></span></p>
+<p><span><span>按住shift點選不在旋轉軸分支下的零件&gt;按右鍵 Edit&gt;Grouping/Merging&gt;Merge selected shape</span></span></p>
+<p><span><span><img alt="" height="314" src="./../images/coppeliaSim_95O5g9nzUG.png" width="558"/></span></span></p>
+<p><span><span>再將三個旋轉軸加到組合件的分支下</span></span></p>
+<p><span><span><img alt="" height="314" src="./../images/coppeliaSim_zQPKjUWXVs.png" width="560"/></span></span></p>
+<p><span><span>9.設定動態特性</span></span></p>
+<p><span><span>點兩下組合件名稱前的圖示&gt;Show dynamic properties dialog</span></span></p>
+<p><span><span><img alt="" height="735" src="./../images/8.png" width="654"/></span></span></p>
+<p><span><span>勾選Body is dynarnic<img alt="" height="749" src="./../images/9.png" width="545"/></span></span></p>
+<p><span><span>點兩下前輪、後輪、踏板名稱前的圖示&gt;Show dynamic properties dialog</span></span></p>
+<p><span><span><img alt="" height="735" src="./../images/8.png" width="654"/></span></span></p>
+<p><span><span>勾選Body is resp</span></span><span>ondable和Body is dynarnic</span></p>
+<p><span><span><img alt="" height="767" src="./../images/10.png" width="562"/></span></span></p>
+<p><span><span>10.進行模擬</span></span></p>
+<p><span><span><img alt="" height="314" src="./../images/coppeliaSim_XKJkcxyHQl.png" width="560"/></span></span></p>
 <br />week2 << <a href='week2.html'>Previous</a> <a href='week4.html'>Next</a> >> week4</div>
         
     <!-- footer -->
