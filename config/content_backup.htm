@@ -50,6 +50,16 @@
 <p><a href="https://40623144.github.io/cd2021/content/week7.html">week7</a></p>
 <p><a href="https://40623144.github.io/cd2021/content/week8.html">week8</a></p>
 <p><a href="https://40623144.github.io/cd2021/content/week9.html">week9</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week10.html">week10</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week11.html">week11</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week12.html">week12</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week13.html">week13</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week14.html">week14</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week15.html">week15</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week16.html">week16</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week17.html">week17</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week18.html">week18</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week5.html"></a></p>
 <h2>week1</h2>
 <p>建立倉儲 cd2021</p>
 <p>1.到達老師倉儲下的cmstemplate，點選use this template</p>
@@ -155,7 +165,20 @@
 <h3>week9</h3>
 <p><span>第二階段報告 期中報告</span></p>
 <h2>week10~17</h2>
+<p><a href="https://40623144.github.io/cd2021/content/week10.html">week10</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week11.html">week11</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week12.html">week12</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week13.html">week13</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week14.html">week14</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week15.html">week15</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week16.html">week16</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week17.html">week17</a></p>
+<p><a href="https://40623144.github.io/cd2021/content/week18.html">week18</a></p>
 <h3>week10</h3>
+<p>進行分組以及利用ip使其他台電腦進行模擬</p>
+<p><a href="http://mde.tw/cd2021/content/task2.html">參考網址</a></p>
+<p><a href="https://youtu.be/nFaBvNmfCIQ">模擬影片</a></p>
+<p></p>
 <h3>week11</h3>
 <p>直播</p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/bjHveMUpdx4" width="560"></iframe></p>
@@ -598,48 +621,146 @@ print(output)     #輸出</pre>
 <p>逆向運動學函式:</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/GXN1wtwDJcc" width="560"></iframe></p>
 <p></p>
-<p>Python remote API 逆向運動學函式:<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zvbsc0Deqj8" width="560"></iframe></p><h3>week17</h3>
+<p>Python remote API 逆向運動學函式:<br/><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/zvbsc0Deqj8" width="560"></iframe></p>
+<h3>week17</h3>
 <p>期末模擬評分影片</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/v4dkWUZq0Yc" width="560"></iframe></p>
-<h1>影片</h1>
-<h2>第一週</h2>
+<h1>task</h1>
+<h2>task1</h2>
+<p>程式</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def stu2b(account):
+ return account
+teamb = []
+   
+with open("stage3_2b.txt") as fh:     #讀取stage3_2b的檔案
+    data = fh.readlines()
+    data = [a.replace('40823231','40823231-2') for a in data]      #將40823231換成40823231-2
+    data = [a.replace('407','s407') for a in data]     #將有407的學號換成s407
+  
+for i in range(len(data)):     #數據中會有\n跟\t，將\n跟\t去除
+    group = data[i].rstrip("\n").split("\t")
+    teamb.append(group)
+       
+output = ""    
+seperator = "-"*10 + "&lt;/br&gt;"     #分隔號製作
+   
+for i in teamb[0:]:    #小組 組長 其他六個組員
+    team = i[0]
+    leader = stu2b(i[1])
+    m1 = stu2b(i[3])
+    m2 = stu2b(i[5])
+    m3 = stu2b(i[7])
+    m4 = stu2b(i[9])
+    m5 = stu2b(i[11])
+    m6 = stu2b(i[13])
+  
+           
+    leaderrepo = "&lt;a href='http://github.com/" + leader + "/cd2021'&gt;" + leader + " repo&lt;/a&gt;"    #組長以及組員的倉儲和網站
+    leadersite = "&lt;a href='http://" + leader + ".github.io/cd2021'&gt;" + leader +  " site&lt;/a&gt;"
+    m1repo = "&lt;a href='http://github.com/" + m1 + "/cd2021'&gt;" + m1 + " repo&lt;/a&gt;"
+    m1site = "&lt;a href='http://" + m1 + ".github.io/cd2021'&gt;" + m1 +  " site&lt;/a&gt;"
+    m2repo = "&lt;a href='http://github.com/" + m2 + "/cd2021'&gt;" + m2 + " repo&lt;/a&gt;"
+    m2site = "&lt;a href='http://" + m2 + ".github.io/cd2021'&gt;" + m2 +  " site&lt;/a&gt;"
+    m3repo = "&lt;a href='http://github.com/" + m3 + "/cd2021'&gt;" + m3 + " repo&lt;/a&gt;"
+    m3site = "&lt;a href='http://" + m3 + ".github.io/cd2021'&gt;" + m3 +  " site&lt;/a&gt;"
+    m4repo = "&lt;a href='http://github.com/" + m4 + "/cd2021'&gt;" + m4 + " repo&lt;/a&gt;"
+    m4site = "&lt;a href='http://" + m4 + ".github.io/cd2021'&gt;" + m4 +  " site&lt;/a&gt;"
+    m5repo = "&lt;a href='http://github.com/" + m5 + "/cd2021'&gt;" + m5 + " repo&lt;/a&gt;"
+    m5site = "&lt;a href='http://" + m5 + ".github.io/cd2021'&gt;" + m5 +  " site&lt;/a&gt;"
+    m6repo = "&lt;a href='http://github.com/" + m6 + "/cd2021'&gt;" + m6 + " repo&lt;/a&gt;"
+    m6site = "&lt;a href='http://" + m6 + ".github.io/cd2021'&gt;" + m6 +  " site&lt;/a&gt;"
+    
+   
+    teamrepo = "&lt;a href='http://github.com/" + leader + "/" + team + "'&gt;" + team + " repo&lt;/a&gt;"     #小組的倉儲含網站
+    teamsite =  "&lt;a href='http://" + m1 + ".github.io/" + team + "'&gt;" + team +  " site&lt;/a&gt;"
+   
+    output += teamrepo + " | " + teamsite + " | " +leaderrepo + " | " + leadersite + " | " +m1repo + " | " + m1site + " | " +m2repo + " | " + m2site + " | " +m3repo + " | " + m3site + " | " +m4repo + " | " + m4site + " | " +m5repo + " | " + m5site + " | " +m6repo + " | " + m6site 
+       
+            
+    try:
+        m7 = stu2b(i[15])     #第七個組員
+    except:
+        m7 = ""
+    try:
+        m8 = stu2b(i[17])     #第八個組員
+    except:
+        m8 = ""
+          
+    if m7 != "":
+       m7repo = "&lt;a href='http://github.com/" + m7 + "/cd2021'&gt;" + m7 + " repo&lt;/a&gt;"     #如果有第七個組員會再加倉儲和網站沒有的話就空白
+       m7site = "&lt;a href='http://" + m7 + ".github.io/cd2021'&gt;" + m7 +  " site&lt;/a&gt;" 
+       output += " |  " + m7repo + "| " + m7site
+    else:
+        output += "" 
+       
+    if m8 != "":
+       m8repo = "&lt;a href='http://github.com/" + m8 + "/cd2021'&gt;" + m8 + " repo&lt;/a&gt;"     #如果有第八個組員會再加倉儲和網站最後再加分隔線
+       m8site = "&lt;a href='http://" + m8 + ".github.io/cd2021'&gt;" + m8 +  " site&lt;/a&gt;" 
+       output += " |  " + m8repo + "| " + m8site + "&lt;br /&gt;" + seperator
+    else:
+        output += "&lt;br /&gt;" + seperator
+   
+   
+print(output)     #輸出</pre>
+<p></p>
+<h2>task2</h2>
+<p><span>Python remote API 逆向運動學函式:</span><br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/zvbsc0Deqj8" width="560"></iframe></p>
+<p><span>Python remote API w10範例:</span></p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="https://www.youtube.com/embed/nFaBvNmfCIQ" width="560"></iframe></p>
+<h2>task3</h2>
+<p>w11直播</p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/bjHveMUpdx4" width="560"></iframe></p>
+<p>w12直播</p>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/w-PMVvAl2bg" width="560"></iframe></p>
+<p>w13直播</p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/ofpqCMmHPa8" width="560"></iframe></p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/qZ5iF7GeW84" width="560"></iframe></p>
+<p>w15直播</p>
+<p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/WbbXqoTKe8I" width="560"></iframe></p><h1>影片</h1>
+<h2>stage1</h2>
+<h3>第一週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/gOk4sX5HTSM" width="560"></iframe></p>
-<h2>第二週</h2>
+<h3>第二週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/bJahDPb8U-I" width="560"></iframe></p>
-<h2>第三週</h2>
+<h3>第三週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/KJ6yzjJPx_8" width="560"></iframe></p>
-<h2>第四週</h2>
+<h3>第四週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/lewPjCuxovA" width="560"></iframe></p>
-<h2>第五週</h2>
+<h2>stage2</h2>
+<h3>第五週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/svyfs0AM5bs" width="560"></iframe></p>
-<h2>第六週</h2>
+<h3>第六週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/hVyteR8R5IQ" width="560"></iframe></p>
-<h2>第七週</h2>
+<h3>第七週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/5mbNO6haYPg" width="560"></iframe></p>
-<h2>第八週</h2>
+<h3>第八週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/TB_29Rfcnao" width="560"></iframe></p>
-<h2>第九週</h2>
+<h3>第九週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/A9relxyp5Ys" width="560"></iframe></p>
-<h2>第十週</h2>
-<h2>第十一週</h2>
+<h2>stage3</h2>
+<h3>第十週</h3>
+<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/nFaBvNmfCIQ" width="560"></iframe></p>
+<h3>第十一週</h3>
 <p>直播</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/bjHveMUpdx4" width="560"></iframe></p>
-<h2>第十二週</h2>
+<h3>第十二週</h3>
+<p>w12</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/w-PMVvAl2bg" width="560"></iframe></p>
-<h2>第十三週</h2>
+<h3>第十三週</h3>
 <p>直播</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/ofpqCMmHPa8" width="560"></iframe></p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/qZ5iF7GeW84" width="560"></iframe></p>
 <p>影片</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/gJ6Gfl1r-Mk" width="560"></iframe></p>
-<h2>第十四週</h2>
+<h3>第十四週</h3>
 <p></p>
-<h2>第十五週</h2>
+<h3>第十五週</h3>
 <p>直播</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WbbXqoTKe8I" width="560"></iframe></p>
-<h2>第十六週</h2>
+<h3>第十六週</h3>
 <p>onshape繪製</p>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/IF_qXp7IuDI" width="560"></iframe></p>
+<p></p>
 <p>建立CoppeliaSim 4.1.0 MTB robot場景:</p>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/jLCFc6vu4sI" width="560"></iframe></p>
 <p></p>
@@ -650,8 +771,9 @@ print(output)     #輸出</pre>
 <p><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/GXN1wtwDJcc" width="560"></iframe></p>
 <p></p>
 <p>Python remote API 逆向運動學函式:<br/><iframe allowfullscreen="allowfullscreen" data-mce-fragment="1" height="314" src="https://www.youtube.com/embed/zvbsc0Deqj8" width="560"></iframe></p>
-<h2>第十七週</h2>
+<h3>第十七週</h3>
 <p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/v4dkWUZq0Yc" width="560"></iframe></p>
+<h3>第十八週</h3>
 <h1>問題</h1>
 <h2>stage-1</h2>
 <p>問題:進行模擬時，因為輪胎和地面接觸面積不夠導致還沒向前進，就向側面倒了。</p>
